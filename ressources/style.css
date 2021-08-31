@@ -1,5 +1,48 @@
 * {
     font-family: 'Expletus Sans', cursive;
-    background-color: #130d06;
     color: #fff;
+    background: rgb(56, 56, 56);
+}
+
+/* NAVIGATION BAR */
+
+
+#tab {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#tab li {
+    list-style-type: none;
+    width: 250px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#tab li a {
+    text-decoration: none;
+}
+
+/* INTRODUCTION SECTION */
+
+#introduction {
+    display: flex;
+}
+
+#profilPic {
+    width: 300px;
+    margin: 80px 150px;
+}
+
+#profil {
+    width: 80%;
+    padding: 40px;
+}
+
+#profil h1 {
+    font-size: 40px;
+}
+
+#ref {
+    font-weight: bold;
 }
