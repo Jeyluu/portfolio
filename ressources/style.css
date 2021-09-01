@@ -1,32 +1,53 @@
 * {
     font-family: 'Expletus Sans', cursive;
+    margin: 0;
+    padding: 0;
     color: #fff;
-    background: rgb(56, 56, 56);
 }
 
 /* NAVIGATION BAR */
 
-
-#tab {
+#navbar {
     display: flex;
+    align-items: center;
     justify-content: flex-end;
-}
-
-#tab li {
-    list-style-type: none;
-    width: 250px;
-    font-size: 20px;
     text-align: center;
+    background-color: rgba(34, 34, 34, 0.842);
+    height: 10vh;
 }
 
-#tab li a {
+.tab {
+    width: 250px;
+
+    background-color: rgba(34, 34, 34, 0);
+}
+
+.tab a {
+    background-color: rgba(34, 34, 34, 0);
+    color: #fff;
     text-decoration: none;
+    font-size: 20px;
+    padding: 25px;
+
+}
+
+
+.tab a:hover {
+    color: #000;
+    background-color: gold;
+    transition: 1s;
+}
+
+.tab:hover {
+    transform: skewX(10deg)translateX(10px);
+    transition: 0.5s;
 }
 
 /* INTRODUCTION SECTION */
 
 #introduction {
     display: flex;
+    background-color: darkslateblue;
 }
 
 #profilPic {
