@@ -6,6 +6,12 @@
     color: #fff;
 }
 
+*::before,
+::after {
+    box-sizing: border-box;
+}
+
+
 /* NAVIGATION BAR */
 
 #navbar {
@@ -66,12 +72,27 @@
 
 #ref {
     font-weight: bold;
+    display: block;
 }
 
 /* FORMATION SECTION */
 
 #formations {
-    background-color: rgba(0, 0, 0, 0.884);
+    width: 100%;
+    background: rgba(0, 0, 0, 0.884);
+    padding: 20px;
+}
+
+#entite h1 {
+    text-align: center;
+}
+
+#egc {
+    margin: 40px;
+}
+
+#arinfo {
+    margin: 40px;
 }
 
 /* SKILLS SECTION */
@@ -165,4 +186,91 @@
     100% {
         width: 80%;
     }
+}
+
+/* PROJECT SECTION */
+
+#project {
+    background-color: #ffee01;
+    padding: 40px;
+}
+
+#project h1 {
+    color: black;
+    text-align: center;
+}
+
+
+.card {
+    background-image: url(/ressources/images/ecommerce.jpg);
+    background-size: cover;
+    padding: 10rem 0 0;
+    max-width: 35ch;
+    margin: 2rem;
+    padding: 10rem 0 0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 500ms ease;
+}
+
+.card:hover {
+    transform: scale(1.08);
+}
+
+.card-content {
+    --padding: 1.5rem;
+    padding: var(--padding);
+    background: linear-gradient(hsl(0 0% 0% /0),
+            hsl(20 0% 0% /0.5) 20%,
+            hsl(0 0% 0% /1));
+
+    transform: translateY(80%);
+    transition: transform 500ms ease;
+}
+
+.card:hover .card-content {
+    transform: translateY(0%);
+}
+
+.cardtitle {
+    position: relative;
+    width: max-content;
+    margin-bottom: 1rem;
+
+}
+
+.cardtitle::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    background: #01c4ff;
+    width: calc(100% + var(--padding));
+    left: calc(var(--padding)* -1);
+    bottom: 0;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 500ms ease;
+}
+
+.card:hover .cardtitle::after {
+    transform: scaleX(1);
+}
+
+.button {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: hsl(207 19% 9%);
+    background-color: #01c4ff;
+    padding: 0.5em 1.25em;
+    margin-top: 0.5em;
+    border-radius: 0.2rem;
+
+}
+
+.button:hover,
+.button:focus {
+    background-color: darkslateblue;
+    color: #fff;
+    transition-duration: 0.3s;
 }
