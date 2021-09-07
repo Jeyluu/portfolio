@@ -25,7 +25,8 @@
 }
 
 .tab {
-    background-color: rgba(34, 34, 34, 0);margin-right: 20px;
+    background-color: rgba(34, 34, 34, 0);
+    margin-right: 15px;
 }
 
 .tab a {
@@ -46,7 +47,7 @@
 }
 
 .tab:hover {
-    transform: skewX(10deg)translateX(10px);
+    transform: skewX(5deg)translateX(10px);
     transition: 0.5s;
 }
 
@@ -80,7 +81,7 @@
 /* FORMATION SECTION */
 
 #formations {
-    width: 100%;
+    
     background: rgba(0, 0, 0, 0.884);
     padding: 20px;
 }
@@ -102,15 +103,25 @@
 #skills {
     background-color: #333;
     width: 100%;
+
 }
 
-.skillContainer {
-    width: 100%;
+#skills h1{
+    text-align: center;
+    padding: 10px;
+}
+
+
+.langageContainer {
     padding: 20px 40px;
 }
 
-.skillContainer li {
+.langageContainer li {
     margin: 20px 0;
+}
+
+.langageContainer li h3{
+    margin-left: 20px;
 }
 
 .bar {
@@ -121,7 +132,8 @@
     border-radius: 3px;
     overflow: hidden;
     box-shadow: 0 0 8px #01c4ff;
-    margin-top: 10px;
+    margin: 20px;
+
 }
 
 .bar span {
@@ -135,6 +147,11 @@
     animation: html 2s;
 }
 
+.css {
+    width: 80%;
+    animation: css 2s;
+}
+
 .javascript {
     width: 60%;
     animation: javascript 2s;
@@ -145,13 +162,25 @@
     animation: php 2s;
 }
 
-.db {
+.mysql {
     width: 80%;
-    animation: db 2s;
+    animation: mysql 2s;
 }
 
-/* ANIMATED BAR */
+
+
+/* ANIMATED BAR LANGAGE */
 @keyframes html {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes css {
     0% {
         width: 0%;
     }
@@ -181,7 +210,7 @@
     }
 }
 
-@keyframes db {
+@keyframes mysql {
     0% {
         width: 0%;
     }
@@ -190,6 +219,104 @@
         width: 80%;
     }
 }
+
+/*  BAR FRAMEWORK */
+
+
+.frameworkContainer {
+    
+    padding: 20px 40px;
+}
+
+.frameworkContainer li {
+    margin: 20px 0;
+}
+
+.frameworkContainer li h3{
+    margin-left: 20px;
+}
+
+.nodeJs {
+    width: 90%;
+    animation: nodeJs 2s;
+}
+
+.symfony {
+    width: 60%;
+    animation: symfony 2s;
+}
+
+
+/* ANIMATED BAR FRAMEWORK */
+@keyframes nodeJs {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes symfony {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+/*  BAR FRAMEWORK */
+
+
+.dbContainer {
+    
+    padding: 20px 40px;
+}
+
+.dbContainer li {
+    margin: 20px 0;
+}
+
+.dbContainer li h3{
+    margin-left: 20px;
+}
+
+.phpmyadmin {
+    width: 90%;
+    animation: phpmyadmin 2s;
+}
+
+.mongo {
+    width: 60%;
+    animation: mongo 2s;
+}
+
+
+/* ANIMATED BAR DATABASE */
+@keyframes phpmyadmin {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes mongo {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+
 
 /* PROJECT SECTION */
 
