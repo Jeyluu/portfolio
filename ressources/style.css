@@ -1,10 +1,11 @@
 * {
-    font-family: 'Expletus Sans', cursive;
+    font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
     list-style-type: none;
     color: #fff;
 }
+
 
 *::before,
 ::after {
@@ -35,7 +36,7 @@ html {
     background-color: rgba(34, 34, 34, 0);
     color: #fff;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 3.2vw;
     padding: 25px;
     width: 250px;
 
@@ -71,9 +72,12 @@ html {
 }
 
 #profil h1 {
-    font-size: 40px;
+    font-size: 50px;
     margin-bottom: 10px;
+    margin: 0;
+    letter-spacing: 0.03em;
 }
+
 
 #profil h2 {
     margin-bottom: 20px;
@@ -368,7 +372,7 @@ html {
     background-size: cover;
     padding: 10rem 0 0;
     max-width: 35ch;
-    margin: 2rem;
+    margin: 2rem 1rem;
     padding: 10rem 0 0;
     border-radius: 0.5rem;
     overflow: hidden;
@@ -468,10 +472,22 @@ html {
 }
 
 .form p {
-    margin-top: 40px;
+    margin: 2rem;
+}
+
+.icons {
+    font-size: 10vw;
+    margin: 2rem;
 }
 
 @media (min-width:1000px) {
+
+    /* NAVBAR */
+
+    .tab a {
+        font-size: 1vw;
+    }
+
     /* INTRODUCTION SECTION */
 
     #introduction {
@@ -488,15 +504,15 @@ html {
     #profil h2 {
 
         font-size: 40px;
-        white-space : nowrap;
+        white-space: nowrap;
         position: relative;
         color: darkslateblue;
-        -webkit-text-stroke: 1px rgba(51, 51, 51, 0.747);
+        -webkit-text-stroke: 1px rgba(211, 211, 211, 0.747);
         text-transform: uppercase;
     }
 
     #profil h2::before {
-        
+
         content: attr(data-text);
         position: absolute;
         top: 0;
@@ -518,11 +534,15 @@ html {
         }
 
         100% {
-            width: 60%;
+            width: 59%;
         }
     }
 
+    /* FORMATION SECTION */
 
+    #entite {
+        text-align: center;
+    }
     /* SKILLS SECTION */
 
     #skills {
@@ -580,8 +600,21 @@ html {
     }
 
     .card {
+        margin: 4.5rem;
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     }
+
+    /* CONTACT SECTION */
+
+    .icons {
+        font-size: 3vw;
+        margin: 2rem;
+    }
+
+    .git {
+        margin-right: 1rem;
+    }
+
 
 
 }
