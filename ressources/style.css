@@ -377,21 +377,17 @@ html {
     transform: scale(1.08);
 }
 
+/* Site Ecommerce Symfony */
+
 .card-content {
     --padding: 1.5rem;
     padding: var(--padding);
     background: linear-gradient(hsl(0 0% 0% /0),
-            hsl(20 0% 0% /0.5) 20%,
-            hsl(0 0% 0% /1));
-    transform: translateY(80%);
+                hsl(20 0% 0% /0.5) 20%,
+                hsl(0 0% 0% /1));
     transition: transform 500ms ease;
+    transform: translateY(80%);
 
-}
-
-.card:hover .card-content,
-.card:focus-within .card-content {
-    transform: translateY(0);
-    transition-delay: 500ms;
 }
 
 .card:focus-within .card-content {
@@ -408,6 +404,49 @@ html {
     opacity: 1;
     transition-delay: 1000ms;
 }
+
+.card:hover .card-content,
+.card:focus-within .card-content {
+    transform: translateY(0);
+    transition-delay: 500ms;
+}
+
+/* Projet exam  Card */
+
+/* TechMag Card */
+.techMag-content {
+    --padding: 1.5rem;
+    padding: var(--padding);
+    background: linear-gradient(hsl(0 0% 0% /0),
+                hsl(20 0% 0% /0.5) 20%,
+                hsl(0 0% 0% /1));
+    transform: translateY(138%);
+    transition: transform 500ms ease;
+
+}
+
+.card:hover .techMag-content,
+.card:focus-within .techMag-content {
+    transform: translateY(75%);
+    transition-delay: 500ms;
+}
+
+.card:focus-within .techMag-content {
+    transition-duration: 0ms;
+}
+
+.techMag-content>*:not(.cardtitle) {
+    opacity: 0;
+    transition: opacity 500ms linear;
+}
+
+.card:hover .techMag-content>*:not(.cardtitle),
+.card:focus-within .techMag-content>*:not(.cardtitle) {
+    opacity: 1;
+    transition-delay: 1000ms;
+}
+
+
 
 .cardtitle {
     position: relative;
