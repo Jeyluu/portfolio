@@ -57,13 +57,17 @@ html {
 /* INTRODUCTION SECTION */
 #introduction {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     background-color: darkslateblue;
 }
 
+
 #profilPic {
     width: 50vw;
-    margin: 80px;
+    margin-top: 20px;
+    border-radius: 100px;
+
 }
 
 #profil {
@@ -361,8 +365,9 @@ html {
 
 
 .card {
-    background-image: url(/ressources/images/ecommerce.jpg);
+    background-image: url(/ressources/images/SiteEcommerce.png);
     background-size: cover;
+    background-position: center;
     padding: 10rem 0 0;
     max-width: 35ch;
     margin: 2rem 1rem;
@@ -383,8 +388,8 @@ html {
     --padding: 1.5rem;
     padding: var(--padding);
     background: linear-gradient(hsl(0 0% 0% /0),
-                hsl(20 0% 0% /0.5) 20%,
-                hsl(0 0% 0% /1));
+            hsl(20 0% 0% /0.5) 20%,
+            hsl(0 0% 0% /1));
     transition: transform 500ms ease;
     transform: translateY(80%);
 
@@ -411,27 +416,105 @@ html {
     transition-delay: 500ms;
 }
 
-/* Projet exam  Card */
+.card:hover .cardtitle::after,
+.card:focus-within .cardtitle::after {
+    transform: scaleX(1);
+}
 
-/* TechMag Card */
-.techMag-content {
+/* Projet exam  Card */
+.examArinfo-card {
+    background-image: url(/ressources/images/examarinfo.png);
+    background-size: cover;
+    background-position: center;
+    padding: 10rem 0 0;
+    max-width: 35ch;
+    margin: 2rem 1rem;
+    padding: 10rem 0 0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 500ms ease;
+}
+
+.examArinfo-card:hover,
+.examArinfo-card:focus-within {
+    transform: scale(1.08);
+}
+
+.examArinfo-content {
     --padding: 1.5rem;
     padding: var(--padding);
     background: linear-gradient(hsl(0 0% 0% /0),
-                hsl(20 0% 0% /0.5) 20%,
-                hsl(0 0% 0% /1));
-    transform: translateY(138%);
+            hsl(20 0% 0% /0.5) 20%,
+            hsl(0 0% 0% /1));
+    transform: translateY(75%);
     transition: transform 500ms ease;
 
 }
 
-.card:hover .techMag-content,
-.card:focus-within .techMag-content {
-    transform: translateY(75%);
+.examArinfo-card:hover .examArinfo-content,
+.examArinfo-card:focus-within .examArinfo-content {
+    transform: translateY(0);
     transition-delay: 500ms;
 }
 
-.card:focus-within .techMag-content {
+.examArinfo-card:focus-within .examArinfo-content {
+    transition-duration: 0ms;
+}
+
+.examArinfo-content>*:not(.cardtitle) {
+    opacity: 0;
+    transition: opacity 500ms linear;
+}
+
+.examArinfo-card:hover .examArinfo-content>*:not(.cardtitle),
+.examArinfo-card:focus-within .examArinfo-content>*:not(.cardtitle) {
+    opacity: 1;
+    transition-delay: 1000ms;
+}
+
+.examArinfo-card:hover .cardtitle::after,
+.examArinfo-card:focus-within .cardtitle::after {
+    transform: scaleX(1);
+}
+
+/* TechMag Card */
+
+.techMag-card {
+    background-image: url(/ressources/images/techMagazine.png);
+    background-size: cover;
+    background-position: center;
+    padding: 10rem 0 0;
+    max-width: 35ch;
+    margin: 2rem 1rem;
+    padding: 10rem 0 0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 500ms ease;
+}
+
+.techMag-card:hover,
+.techMag-card:focus-within {
+    transform: scale(1.08);
+}
+
+.techMag-content {
+    --padding: 1.5rem;
+    padding: var(--padding);
+    background: linear-gradient(hsl(0 0% 0% /0),
+            hsl(20 0% 0% /0.5) 20%,
+            hsl(0 0% 0% /1));
+    transform: translateY(65%);
+    transition: transform 500ms ease;
+
+}
+
+.techMag-card:hover .techMag-content,
+.techMag-card:focus-within .techMag-content {
+    transform: translateY(5%);
+    transition-delay: 500ms;
+}
+
+.techMag-card:focus-within .techMag-content {
     transition-duration: 0ms;
 }
 
@@ -440,10 +523,15 @@ html {
     transition: opacity 500ms linear;
 }
 
-.card:hover .techMag-content>*:not(.cardtitle),
-.card:focus-within .techMag-content>*:not(.cardtitle) {
+.techMag-card:hover .techMag-content>*:not(.cardtitle),
+.techMag-card:focus-within .techMag-content>*:not(.cardtitle) {
     opacity: 1;
     transition-delay: 1000ms;
+}
+
+.techMag-card:hover .cardtitle::after,
+.techMag-card:focus-within .cardtitle::after {
+    transform: scaleX(1);
 }
 
 
@@ -468,10 +556,7 @@ html {
     transition: transform 500ms ease;
 }
 
-.card:hover .cardtitle::after,
-.card:focus-within .cardtitle::after {
-    transform: scaleX(1);
-}
+
 
 .button {
     cursor: pointer;
@@ -535,9 +620,20 @@ html {
         background-color: darkslateblue;
     }
 
+    #photo {
+        width: 60%;
+        margin: 4vw;
+
+    }
+
     #profilPic {
         width: 20vw;
         margin: 80px;
+
+    }
+
+    #profil{
+        margin: 50px auto;
     }
 
     #profil h2 {
@@ -548,6 +644,7 @@ html {
         color: darkslateblue;
         -webkit-text-stroke: 1px rgba(211, 211, 211, 0.747);
         text-transform: uppercase;
+        margin-top: 20px;
     }
 
     #profil h2::before {
@@ -575,6 +672,11 @@ html {
         100% {
             width: 59%;
         }
+    }
+
+    #profil p{
+        margin-top: 50px;
+        padding-right: 500px;
     }
 
     /* FORMATION SECTION */
@@ -639,22 +741,55 @@ html {
         flex-wrap: wrap;
     }
 
+    /* Site Ecommerce Symfony card*/
     .card {
         margin: 4.5rem;
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     }
 
-    /* Pour effet de défilement */
-.reveal {
-    opacity: 0;
-    transform: translateY(-100px);
-}
+    /* examArinfo-card*/
+    .examArinfo-card {
+        margin: 4.5rem;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    }
 
-.visible {
-    opacity: 1;
-    transform: translateY(0);
-    transition: 2s;
-}
+    .examArinfo-content {
+        transform: translateY(108%);
+    }
+
+    .examArinfo-card:hover .examArinfo-content,
+    .examArinfo-card:focus-within .examArinfo-content {
+        transform: translateY(35%);
+
+    }
+
+    /* techMag-card*/
+    .techMag-card {
+        margin: 4.5rem;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    }
+
+    .techMag-content {
+        transform: translateY(135%);
+    }
+
+    .techMag-card:hover .techMag-content,
+    .techMag-card:focus-within .techMag-content {
+        transform: translateY(75%);
+    }
+
+
+    /* Pour effet de défilement */
+    .reveal {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    .visible {
+        opacity: 1;
+        transform: translateY(0);
+        transition: 2s;
+    }
 
     /* CONTACT SECTION */
 
